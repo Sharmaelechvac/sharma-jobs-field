@@ -15,7 +15,7 @@ No source system was replaced or modified. Each tab reads its live source:
 
 | Tab | Source | How |
 |---|---|---|
-| Jobs | The six SHARMATRACK tracker editions | Merged feed (below) for houses/photos; each builder's tracker opens inside the app (Pages sites frame cleanly) with an "Open the full tracker" button. DNR opens full-screen (its repo isn't in the feed yet). |
+| Jobs | The seven SHARMATRACK builder trackers, grouped | **One Jobs group entry** on the tab (Sanjay, 2026-11-20: "Jobs apps should be grouped!") opens the group page (`#/jobs/group`): every job as its own row (project/address + builder) under its builder's header — 17 houses from the merged feed (below) plus DNR's Mukherjee Residence. Tapping a job opens that builder's tracker inside the app (Pages sites frame cleanly) with an "Open the full tracker" button. DNR's row opens its full tracker (its repo isn't in the feed yet). Grouping is navigation only — trackers, branding and data stay per-builder. |
 | Schedule | Office TV `docs/data.json` (`mySchedule`, kept current by the My Day ↔ Office TV paired sync) | Fetched live from GitHub Pages (CORS-open). |
 | Permits | Permit Tracker worker API | Merged feed — the worker sends frame-blocking headers and no CORS, so the tab renders the feed and deep-links the full app for edits. |
 | Inspections | Office TV `docs/data.json` (`todayInspections`, kept current by the hourly known-inspections updater) | Fetched live; Inspection Prep deep-linked for prep detail. |
