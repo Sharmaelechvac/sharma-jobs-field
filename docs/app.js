@@ -175,11 +175,16 @@
     feed.editions.forEach(function (ed) {
       h += '<div class="jf-h">' + esc(ed.name) + '</div><div class="jf-list">';
       ed.houses.forEach(function (hs) {
+        /* List display rule (Sanjay, 2026-11-20): builder + project/
+           subdivision name only — never a street address on a list row.
+           The address (feed label) appears only inside the job's own
+           tracker view. No project on file -> the builder name carries
+           the row; nothing is invented. */
         h += '<a class="jf-row" href="#/view/' + esc(ed.app) + '">' +
           (hs.latestPhoto ? '<img class="jf-thumb" src="' + esc(hs.latestPhoto.url) + '" alt="" loading="lazy">' : '') +
-          '<span class="jf-row__body"><span class="jf-row__title">' + esc(hs.label) + '</span>' +
-          '<span class="jf-row__sub">' + esc(ed.name) + ' · ' + hs.checklistCards + ' checklist items · ' +
-          hs.photosSeeded + ' photos' +
+          '<span class="jf-row__body"><span class="jf-row__title">' + esc(hs.project || ed.name) + '</span>' +
+          '<span class="jf-row__sub">' + (hs.project ? esc(ed.name) + ' · ' : '') +
+          hs.checklistCards + ' checklist items · ' + hs.photosSeeded + ' photos' +
           (hs.latestPhoto ? ' · latest ' + fmtDay((hs.latestPhoto.takenAt || "").slice(0, 10)) : '') +
           '</span></span><span class="jf-row__chev">›</span></a>';
       });
@@ -189,7 +194,7 @@
       h += '<div class="jf-h">' + esc(a.name) + '</div><div class="jf-list">' +
         '<a class="jf-row" href="' + a.site + '" target="_blank" rel="noopener"><span class="jf-row__body">' +
         '<span class="jf-row__title">' + esc(a.sub.replace(/ tracker$/, "")) + '</span>' +
-        '<span class="jf-row__sub">' + esc(a.name) + ' · ' + esc(a.sub) + ' — opens the full tracker</span></span>' +
+        '<span class="jf-row__sub">' + esc(a.name) + ' · opens the full tracker</span></span>' +
         '<span class="jf-row__chev">›</span></a></div>';
     });
     h += '<p class="jf-updated">House and photo counts from the trackers, as of ' +
@@ -225,9 +230,12 @@
           '<a class="jf-btn" href="' + esc(ed.site) + '" target="_blank" rel="noopener">Open the full tracker</a>' +
           '<div class="jf-h">Houses</div><div class="jf-list">';
         ed.houses.forEach(function (hs) {
+          /* Same list rule as the group page: project/subdivision name,
+             never the street address — the address shows inside the
+             job's own tracker page, which this row opens. */
           h += '<a class="jf-row" href="' + esc(hs.page) + '" target="_blank" rel="noopener">' +
             (hs.latestPhoto ? '<img class="jf-thumb" src="' + esc(hs.latestPhoto.url) + '" alt="" loading="lazy">' : '') +
-            '<span class="jf-row__body"><span class="jf-row__title">' + esc(hs.label) + '</span>' +
+            '<span class="jf-row__body"><span class="jf-row__title">' + esc(hs.project || ed.name) + '</span>' +
             '<span class="jf-row__sub">' + hs.checklistCards + ' checklist items · ' + hs.photosSeeded + ' photos' +
             (hs.latestPhoto ? ' · latest ' + fmtDay((hs.latestPhoto.takenAt || "").slice(0, 10)) : '') +
             '</span></span><span class="jf-row__chev">›</span></a>';
