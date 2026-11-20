@@ -1,0 +1,228 @@
+{
+ "generatedAt": "2026-11-20T05:45:12.674Z",
+ "editions": [
+  {
+   "app": "crew",
+   "name": "Crew — Z Brothers",
+   "site": "https://sharmaelechvac.github.io/sharmatrack-crew/",
+   "houses": [
+    {
+     "job": "3131",
+     "label": "3131 W Eunice Dr",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-crew/3131/",
+     "checklistCards": 12,
+     "photosSeeded": 15,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/sharmatrack-crew/migrated/3131/other/1793620123625-df399b.jpg?v=2",
+      "caption": "Other photos",
+      "takenAt": "2026-11-02T11:48:43.000Z"
+     }
+    },
+    {
+     "job": "3262",
+     "label": "3262 W Eunice Dr",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-crew/3262/",
+     "checklistCards": 12,
+     "photosSeeded": 13,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/sharmatrack-crew/migrated/3262/other/1793619251455-83dd6d.jpg?v=2",
+      "caption": "Other photos",
+      "takenAt": "2026-11-02T11:34:11.000Z"
+     }
+    },
+    {
+     "job": "3274",
+     "label": "3274 W Eunice Dr",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-crew/3274/",
+     "checklistCards": 12,
+     "photosSeeded": 0,
+     "latestPhoto": null
+    },
+    {
+     "job": "3286",
+     "label": "3286 W Eunice Dr",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-crew/3286/",
+     "checklistCards": 12,
+     "photosSeeded": 0,
+     "latestPhoto": null
+    }
+   ]
+  },
+  {
+   "app": "exj",
+   "name": "EXJ Root",
+   "site": "https://sharmaelechvac.github.io/exj-root-tracker/",
+   "houses": [
+    {
+     "job": "14065",
+     "label": "14065 SW 48th Avenue",
+     "page": "https://sharmaelechvac.github.io/exj-root-tracker/14065/",
+     "checklistCards": 12,
+     "photosSeeded": 3,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/exj-root-tracker/seed-photos/14065-underground.jpg?v=10",
+      "caption": "Conduit laid in trench",
+      "takenAt": "2026-11-12T16:09:00"
+     }
+    },
+    {
+     "job": "15133",
+     "label": "15133 SW 27th Ct",
+     "page": "https://sharmaelechvac.github.io/exj-root-tracker/15133/",
+     "checklistCards": 12,
+     "photosSeeded": 1,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/exj-root-tracker/seed-photos/15133-underground.jpg?v=10",
+      "caption": "Conduit laid in trench",
+      "takenAt": "2026-11-12T16:09:00"
+     }
+    },
+    {
+     "job": "16321",
+     "label": "16321 SW 26th Terrace Rd",
+     "page": "https://sharmaelechvac.github.io/exj-root-tracker/16321/",
+     "checklistCards": 12,
+     "photosSeeded": 4,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/exj-root-tracker/seed-photos/16321-underground.jpg?v=10",
+      "caption": "Conduit laid in trench",
+      "takenAt": "2026-11-12T16:09:00"
+     }
+    },
+    {
+     "job": "17385",
+     "label": "17385 SW 25th Cir",
+     "page": "https://sharmaelechvac.github.io/exj-root-tracker/17385/",
+     "checklistCards": 12,
+     "photosSeeded": 5,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/exj-root-tracker/seed-photos/17385-underground.jpg?v=10",
+      "caption": "Conduit laid in trench",
+      "takenAt": "2026-11-12T16:09:00"
+     }
+    },
+    {
+     "job": "212",
+     "label": "212 Marion Oaks Golf Rd",
+     "page": "https://sharmaelechvac.github.io/exj-root-tracker/212/",
+     "checklistCards": 12,
+     "photosSeeded": 16,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/exj-root-tracker/seed-photos/212-hvac-rough-living.jpg?v=10",
+      "caption": "HVAC ROUGH · Ductwork over living area",
+      "takenAt": "2026-11-18T09:41:00"
+     }
+    },
+    {
+     "job": "498",
+     "label": "498 Marion Oaks Golf Rd",
+     "page": "https://sharmaelechvac.github.io/exj-root-tracker/498/",
+     "checklistCards": 12,
+     "photosSeeded": 1,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/exj-root-tracker/seed-photos/498-underground.jpg?v=10",
+      "caption": "Conduit laid in trench",
+      "takenAt": "2026-11-12T16:09:00"
+     }
+    },
+    {
+     "job": "601",
+     "label": "601 Marion Oaks Golf Rd",
+     "page": "https://sharmaelechvac.github.io/exj-root-tracker/601/",
+     "checklistCards": 12,
+     "photosSeeded": 3,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/exj-root-tracker/seed-photos/601-underground.jpg?v=10",
+      "caption": "Conduit laid in trench",
+      "takenAt": "2026-11-12T16:09:00"
+     }
+    }
+   ]
+  },
+  {
+   "app": "nok",
+   "name": "NOK Construction",
+   "site": "https://sharmaelechvac.github.io/sharmatrack-nok/",
+   "houses": [
+    {
+     "job": "109-forest-park-ct",
+     "label": "109 Forest Park Ct",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-nok/109-forest-park-ct/",
+     "checklistCards": 12,
+     "photosSeeded": 0,
+     "latestPhoto": null
+    },
+    {
+     "job": "antle",
+     "label": "3119 Colorado Ave",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-nok/antle/",
+     "checklistCards": 12,
+     "photosSeeded": 0,
+     "latestPhoto": null
+    },
+    {
+     "job": "glaze",
+     "label": "132 Balmy Coast Road",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-nok/glaze/",
+     "checklistCards": 12,
+     "photosSeeded": 8,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/sharmatrack-nok/seed-photos/glaze-plug-eliminated-feed-redirected.jpg",
+      "caption": "ROUGH · Plug was eliminated and redirected feed into existing outlet from light switch",
+      "takenAt": "2026-11-10T16:25:13.000Z"
+     }
+    }
+   ]
+  },
+  {
+   "app": "logan",
+   "name": "Logan Construction",
+   "site": "https://sharmaelechvac.github.io/sharmatrack-logan/",
+   "houses": [
+    {
+     "job": "lot-69",
+     "label": "16051 Vetta Dr",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-logan/lot-69/",
+     "checklistCards": 0,
+     "photosSeeded": 0,
+     "latestPhoto": null
+    }
+   ]
+  },
+  {
+   "app": "mrcela",
+   "name": "MRCELA",
+   "site": "https://sharmaelechvac.github.io/sharmatrack-mrcela/",
+   "houses": [
+    {
+     "job": "blandford",
+     "label": "9700 Blandford Rd",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-mrcela/blandford/",
+     "checklistCards": 12,
+     "photosSeeded": 0,
+     "latestPhoto": null
+    }
+   ]
+  },
+  {
+   "app": "brross",
+   "name": "BR Ross Construction",
+   "site": "https://sharmaelechvac.github.io/sharmatrack-brross/",
+   "houses": [
+    {
+     "job": "fisher",
+     "label": "178 Fisher Loop",
+     "page": "https://sharmaelechvac.github.io/sharmatrack-brross/fisher/",
+     "checklistCards": 12,
+     "photosSeeded": 4,
+     "latestPhoto": {
+      "url": "https://sharmaelechvac.github.io/sharmatrack-brross/seed-photos/fisher-underground-island-stubup.jpg?v=1",
+      "caption": "Kitchen island stub-up",
+      "takenAt": "2026-11-16T09:03:00"
+     }
+    }
+   ]
+  }
+ ],
+ "note": "Per-house checklist card counts and seeded photo activity, read from the tracker repos. No stage % is published: seed captions are free-form photo captions, not checklist labels, so a coverage ratio would misstate progress. Per-card photo state from each edition's tracker API merges in Phase 2 step 2."
+}

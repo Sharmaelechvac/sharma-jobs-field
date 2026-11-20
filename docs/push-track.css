@@ -1,0 +1,85 @@
+/* SharmaPushTrack panel — applied to Jobs & Field (Lean App 4 of 7) and
+   rebranded to the office theme: navy #264387 / gold #F0A846 (the Track
+   brand stays on Sharma Track itself, per the lean plan). Light always;
+   dark only when the app itself is switched (kit data-scheme="dark"). */
+.spt {
+  --spt-blue: #264387;
+  --spt-blue-dark: #1a2f61;
+  --spt-gold: #F0A846;
+  --spt-ink: #1d2433;
+  --spt-muted: #5b6478;
+  --spt-line: #dfe4ee;
+  --spt-card: #ffffff;
+  --spt-soft: #f4f6fb;
+  font-size: 18px;
+  color: var(--spt-ink);
+  background: var(--spt-card);
+  border: 1px solid var(--spt-line);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+.spt * { box-sizing: border-box; }
+.spt-head { display: flex; align-items: center; gap: 10px; }
+.spt-title { font-size: 20px; font-weight: 700; color: var(--spt-ink); }
+.spt-dot { width: 12px; height: 12px; border-radius: 50%; background: #b6c2cc; flex: none; }
+.spt-dot.on { background: #1d9e57; }
+.spt-dot.off { background: #b6c2cc; }
+.spt-status { margin: 8px 0 0; color: var(--spt-muted); font-size: 16px; line-height: 1.4; }
+.spt-tip {
+  margin: 12px 0 0; padding: 12px 14px; border-radius: 10px;
+  background: var(--spt-soft); border: 1px solid var(--spt-line);
+  font-size: 16px; line-height: 1.45;
+}
+.spt-field { display: block; margin: 14px 0 0; }
+.spt-field-label { display: block; font-size: 15px; font-weight: 600; color: var(--spt-muted); margin-bottom: 6px; }
+.spt-input {
+  width: 100%; min-height: 48px; padding: 10px 12px; font-size: 18px;
+  color: var(--spt-ink); background: var(--spt-card);
+  border: 1px solid var(--spt-line); border-radius: 10px;
+}
+.spt-btn {
+  display: block; width: 100%; min-height: 52px; margin: 16px 0 0;
+  padding: 12px 16px; font-size: 18px; font-weight: 700;
+  color: #fff; background: var(--spt-blue); border: 0; border-radius: 12px;
+  box-shadow: inset 0 -4px 0 var(--spt-gold);
+  cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.spt-tip { border-left: 6px solid var(--spt-gold); }
+.spt-btn:active { background: var(--spt-blue-dark); }
+.spt-btn-ghost {
+  background: var(--spt-card); color: var(--spt-blue);
+  border: 2px solid var(--spt-blue);
+}
+.spt-btn-ghost:active { background: var(--spt-soft); }
+.spt-list { margin: 10px 0 0; }
+.spt-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 56px; padding: 8px 0; border-top: 1px solid var(--spt-line);
+  cursor: pointer;
+}
+.spt-row-label { font-size: 17px; line-height: 1.35; }
+.spt-switch { position: relative; flex: none; width: 56px; height: 34px; }
+.spt-switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.spt-track {
+  position: absolute; inset: 0; border-radius: 999px; background: #c3cedb;
+  transition: background .15s ease; pointer-events: none;
+}
+.spt-track::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 28px; height: 28px;
+  border-radius: 50%; background: #fff; transition: left .15s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.spt-switch input:checked + .spt-track { background: var(--spt-blue); }
+.spt-switch input:checked + .spt-track::after { left: 25px; }
+.spt-switch input:focus-visible + .spt-track { outline: 3px solid var(--spt-blue); outline-offset: 2px; }
+.spt-msg { margin: 10px 0 0; min-height: 1.2em; font-size: 15px; color: var(--spt-muted); }
+
+html[data-scheme="dark"] .spt {
+  --spt-ink: #e8edf7;
+  --spt-muted: #9db2d8;
+  --spt-line: #2a3a5f;
+  --spt-card: #141d33;
+  --spt-soft: #1d2a4a;
+}

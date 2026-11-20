@@ -1,0 +1,109 @@
+/*! Jobs & Field (Lean App 4 of 7) — app styles on top of sharma-kit v1.3.
+   Office theme: navy #264387 / gold #F0A846. 18px minimum content type,
+   big tap targets, no emoji. Light always; dark only via the kit
+   Appearance switch (html[data-scheme="dark"]). */
+:root {
+  --jf-navy: #264387; --jf-navy-dark: #1a2f61; --jf-gold: #F0A846;
+  --jf-ink: #1d2433; --jf-gray: #5b6478; --jf-line: #dfe4ee;
+  --jf-page: #f4f6fb; --jf-panel: #ffffff;
+  --jf-ok: #1e7a34; --jf-warn: #9a6a12; --jf-bad: #b3261e;
+}
+html[data-scheme="dark"] {
+  --jf-ink: #e8edf7; --jf-gray: #9db2d8; --jf-line: #2a3a5f;
+  --jf-page: #0e1526; --jf-panel: #141d33;
+  --jf-ok: #4cc06a; --jf-warn: #e0aa4e; --jf-bad: #e0655c;
+}
+.jf { font-size: 18px; line-height: 1.45; color: var(--jf-ink); }
+.jf * { box-sizing: border-box; }
+
+.jf-h {
+  margin: 22px 2px 8px; font-size: 20px; font-weight: 700; color: var(--jf-navy-dark);
+}
+html[data-scheme="dark"] .jf-h { color: var(--jf-ink); }
+.jf-h::after { content: ""; display: block; height: 2px; background: var(--jf-gold); margin-top: 5px; }
+.jf-h:first-child { margin-top: 4px; }
+
+.jf-note { color: var(--jf-gray); font-size: 18px; margin: 8px 2px; }
+.jf-small { color: var(--jf-gray); font-size: 16px; }
+.jf-updated { color: var(--jf-gray); font-size: 15px; margin: 10px 2px 0; }
+
+.jf-list { background: var(--jf-panel); border: 1px solid var(--jf-line); border-radius: 10px; overflow: hidden; margin: 0 0 6px; }
+.jf-row {
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  min-height: 62px; padding: 10px 14px; color: var(--jf-ink);
+  text-decoration: none; border-top: 1px solid var(--jf-line);
+  background: none; font: inherit; text-align: left; cursor: pointer;
+}
+.jf-row:first-child { border-top: none; }
+a.jf-row:active, button.jf-row:active { background: #eef2fa; }
+html[data-scheme="dark"] a.jf-row:active, html[data-scheme="dark"] button.jf-row:active { background: #1d2a4a; }
+.jf-row__body { flex: 1 1 auto; min-width: 0; }
+.jf-row__title { display: block; font-size: 18px; font-weight: 600; line-height: 1.25; }
+.jf-row__sub { display: block; font-size: 16px; color: var(--jf-gray); line-height: 1.35; margin-top: 2px; }
+.jf-row__chev { flex: 0 0 auto; color: var(--jf-gray); font-size: 20px; }
+.jf-thumb {
+  flex: 0 0 auto; width: 64px; height: 64px; border-radius: 8px; object-fit: cover;
+  border: 1px solid var(--jf-line); background: var(--jf-page);
+}
+
+.jf-card {
+  background: var(--jf-panel); border: 1px solid var(--jf-line);
+  border-radius: 10px; padding: 16px; margin: 0 0 12px;
+}
+.jf-card__title { font-size: 19px; font-weight: 700; margin: 0 0 4px; color: var(--jf-navy-dark); }
+html[data-scheme="dark"] .jf-card__title { color: var(--jf-ink); }
+
+.jf-chip {
+  display: inline-block; flex: 0 0 auto; padding: 4px 10px; border-radius: 999px;
+  font-size: 15px; font-weight: 700; letter-spacing: 0.01em;
+  color: var(--jf-navy-dark); background: #e3eaf7; white-space: nowrap;
+}
+html[data-scheme="dark"] .jf-chip { color: #c9d8f7; background: #22335e; }
+.jf-chip.is-ok { color: var(--jf-ok); background: rgba(30, 122, 52, 0.12); }
+.jf-chip.is-warn { color: var(--jf-warn); background: rgba(240, 168, 70, 0.18); }
+.jf-chip.is-bad { color: var(--jf-bad); background: rgba(179, 38, 30, 0.10); }
+.jf-chip.is-time { min-width: 86px; text-align: center; }
+
+.jf-btn {
+  display: block; width: 100%; min-height: 56px; padding: 14px 18px; margin: 14px 0 4px;
+  font: inherit; font-size: 19px; font-weight: 700; text-align: center;
+  color: #fff; background: var(--jf-navy); border: none; border-radius: 12px;
+  box-shadow: inset 0 -4px 0 var(--jf-gold); cursor: pointer; text-decoration: none;
+}
+.jf-btn:active { background: var(--jf-navy-dark); }
+
+.jf-tiles { display: flex; gap: 10px; margin: 0 0 6px; }
+.jf-tile {
+  flex: 1 1 0; background: var(--jf-panel); border: 1px solid var(--jf-line);
+  border-radius: 10px; padding: 12px 8px; text-align: center;
+}
+.jf-tile__n { display: block; font-size: 28px; font-weight: 800; color: var(--jf-navy-dark); line-height: 1.1; }
+html[data-scheme="dark"] .jf-tile__n { color: var(--jf-ink); }
+.jf-tile__l { display: block; font-size: 15px; color: var(--jf-gray); margin-top: 2px; }
+
+.jf-empty {
+  background: var(--jf-panel); border: 1px dashed var(--jf-line); border-radius: 10px;
+  padding: 18px 16px; color: var(--jf-gray); font-size: 18px; margin: 0 0 12px;
+}
+
+.jf-frame-wrap { margin: 0 -16px; }
+.jf-frame {
+  display: block; width: 100%; height: 72vh; border: 0;
+  border-top: 1px solid var(--jf-line); border-bottom: 1px solid var(--jf-line);
+  background: #fff;
+}
+
+.jf-seg { display: flex; gap: 8px; margin: 4px 0 6px; }
+.jf-seg button {
+  flex: 1 1 0; min-height: 56px; padding: 10px 6px; cursor: pointer;
+  font: inherit; font-size: 18px; font-weight: 600; color: var(--jf-navy);
+  background: var(--jf-panel); border: 2px solid var(--jf-navy); border-radius: 10px;
+}
+html[data-scheme="dark"] .jf-seg button { color: #c9d8f7; }
+.jf-seg button[aria-pressed="true"] {
+  background: var(--jf-navy); color: #fff;
+  box-shadow: inset 0 -4px 0 var(--jf-gold);
+}
+
+.jf-foot { margin: 26px 2px 8px; color: var(--jf-gray); font-size: 15px; text-align: center; }
+.jf-foot img { height: 30px; width: auto; display: block; margin: 0 auto 6px; }

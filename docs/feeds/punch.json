@@ -1,0 +1,45 @@
+{
+ "generatedAt": "2026-11-20T05:45:12.674Z",
+ "source": "https://sharma-punch.sharma-crew.workers.dev/api/bootstrap",
+ "sourceCounts": {
+  "projects": 0,
+  "openItems": 0,
+  "openPunches": 0,
+  "openTasks": 0,
+  "overdue": 0,
+  "dueToday": 0
+ },
+ "counts": {
+  "houses": 3,
+  "openPunches": 0,
+  "openTasks": 0
+ },
+ "houses": [
+  {
+   "id": "h_56cf8bda19f34132",
+   "address": "2107 Corena Dr",
+   "builder": "",
+   "crew": "",
+   "openPunches": 0,
+   "openTasks": 0
+  },
+  {
+   "id": "h_84712543063046bd",
+   "address": "178 Fisher Loop, Ocklawaha, FL",
+   "builder": "BR Ross Construction Group",
+   "crew": "",
+   "openPunches": 0,
+   "openTasks": 0
+  },
+  {
+   "id": "h_1ffa71dad83c415f",
+   "address": "614 Marion Oaks",
+   "builder": "Z Brothers",
+   "crew": "",
+   "openPunches": 0,
+   "openTasks": 0
+  }
+ ],
+ "openPunches": [],
+ "openTasks": []
+}

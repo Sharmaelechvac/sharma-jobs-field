@@ -1,0 +1,48 @@
+{
+ "generatedAt": "2026-11-20T05:45:12.674Z",
+ "date": "2026-11-20",
+ "scheduleToday": [
+  {
+   "date": "2026-11-20",
+   "time": "10:00 AM",
+   "title": "TUG Installation — 498 Marion Oaks Golf Rd (EXJ Root)",
+   "location": "498 Marion Oaks Golf Rd, Ocala, FL 34473",
+   "notes": "Service: TUG Installation. Parcel 8005-0767-22."
+  }
+ ],
+ "scheduleUpcoming": [
+  {
+   "date": "2026-11-21",
+   "time": "All day",
+   "title": "Momma Sharma's Birthday"
+  },
+  {
+   "date": "2026-11-24",
+   "time": "8:00 AM",
+   "title": "BNI Networking",
+   "location": "Winter Park Golf Course, Winter Park, FL"
+  }
+ ],
+ "inspections": {
+  "date": "2026-11-19",
+  "entries": [
+   {
+    "time": "3:46 PM",
+    "title": "212 Marion Oaks Golf Rd, Ocala",
+    "type": "Rough Mechanical — HVAC",
+    "number": "#268802-2026",
+    "inspector": "Randy Johnston",
+    "inspectorPhone": "Marion Building Safety (352) 438-2400",
+    "status": "Approved",
+    "notes": "Permit BLDR-26-09-23294 · EXJ Root · Completed Thu 11/19/2026 2:43 PM · No inspector note (General Comments blank, Passed: Yes) · Crew covers"
+   }
+  ],
+  "note": "todayInspections block is dated 2026-11-19"
+ },
+ "counts": {
+  "scheduleToday": 1,
+  "permitsTotal": 2,
+  "permitsIssued": 1,
+  "punchOpenItems": 0
+ }
+}

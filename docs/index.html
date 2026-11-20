@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#264387">
+  <meta name="color-scheme" content="light">
+  <script>(function(){try{if(localStorage.getItem("sk-scheme")==="dark"){var d=document.documentElement;d.setAttribute("data-scheme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.content="#1a2f61"}}catch(e){}})()</script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Jobs & Field">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-startup-image" href="splash/splash-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1080x2340.png" media="(device-width: 360px) and (device-height: 780px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1170x2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1179x2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1206x2622.png" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1284x2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1290x2796.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/splash-1320x2868.png" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="stylesheet" href="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.css">
+  <link rel="stylesheet" href="macos.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="push-track.css">
+  <script src="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.js" defer></script>
+  <script src="push-track.js" defer></script>
+  <script src="app.js" defer></script>
+  <title>Jobs &amp; Field · Sharma Electric &amp; HVAC</title>
+</head>
+<body>
+  <header class="sk-header"><div class="sk-header__bar">
+    <div class="sk-header__lead"><a class="sk-header__logo" href="#/jobs" aria-label="Jobs &amp; Field home"><img src="https://sharma-kit.sharma-crew.workers.dev/assets/logo-white-header.png" alt="Sharma Electric &amp; HVAC" width="103" height="20"></a></div>
+    <div class="sk-header__title">Jobs &amp; Field</div>
+    <div class="sk-header__trail"></div>
+  </div></header>
+  <div class="sk-offline"></div>
+
+  <main id="app">
+    <!-- app.js builds the stack screens here; this noscript-style fallback is
+         replaced on load. If the kit fails to load, app.js renders a plain
+         link list into #app so the front door is never a blank page. -->
+    <div class="sk-main"><p class="jf-note">Loading Jobs &amp; Field…</p></div>
+  </main>
+
+  <nav class="sk-tabbar" aria-label="Jobs and Field sections"><div class="sk-tabbar__inner">
+    <a class="sk-tab" data-tab="jobs" href="#/jobs"><svg class="sk-icon"><use href="#i-briefcase"/></svg><span>Jobs</span></a>
+    <a class="sk-tab" data-tab="schedule" data-office href="#/schedule"><svg class="sk-icon"><use href="#i-calendar"/></svg><span>Schedule</span></a>
+    <a class="sk-tab" data-tab="permits" data-office href="#/permits"><svg class="sk-icon"><use href="#i-clipboard"/></svg><span>Permits</span></a>
+    <a class="sk-tab" data-tab="inspections" href="#/inspections"><svg class="sk-icon"><use href="#i-search"/></svg><span>Inspections</span></a>
+    <a class="sk-tab" data-tab="punch" href="#/punch"><svg class="sk-icon"><use href="#i-list"/></svg><span>Punch</span></a>
+    <a class="sk-tab" data-tab="more" href="#/more"><svg class="sk-icon"><use href="#i-more"/></svg><span>More</span></a>
+  </div></nav>
+</body>
+</html>
