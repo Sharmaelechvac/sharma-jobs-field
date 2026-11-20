@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20T05:45:12.674Z",
+ "generatedAt": "2026-11-20T06:03:14.743Z",
  "editions": [
   {
    "app": "crew",
@@ -9,6 +9,7 @@
     {
      "job": "3131",
      "label": "3131 W Eunice Dr",
+     "project": "NONA",
      "page": "https://sharmaelechvac.github.io/sharmatrack-crew/3131/",
      "checklistCards": 12,
      "photosSeeded": 15,
@@ -21,6 +22,7 @@
     {
      "job": "3262",
      "label": "3262 W Eunice Dr",
+     "project": "NONA",
      "page": "https://sharmaelechvac.github.io/sharmatrack-crew/3262/",
      "checklistCards": 12,
      "photosSeeded": 13,
@@ -33,6 +35,7 @@
     {
      "job": "3274",
      "label": "3274 W Eunice Dr",
+     "project": "NONA",
      "page": "https://sharmaelechvac.github.io/sharmatrack-crew/3274/",
      "checklistCards": 12,
      "photosSeeded": 0,
@@ -41,6 +44,7 @@
     {
      "job": "3286",
      "label": "3286 W Eunice Dr",
+     "project": "NONA",
      "page": "https://sharmaelechvac.github.io/sharmatrack-crew/3286/",
      "checklistCards": 12,
      "photosSeeded": 0,
@@ -56,6 +60,7 @@
     {
      "job": "14065",
      "label": "14065 SW 48th Avenue",
+     "project": "Milano",
      "page": "https://sharmaelechvac.github.io/exj-root-tracker/14065/",
      "checklistCards": 12,
      "photosSeeded": 3,
@@ -68,6 +73,7 @@
     {
      "job": "15133",
      "label": "15133 SW 27th Ct",
+     "project": "",
      "page": "https://sharmaelechvac.github.io/exj-root-tracker/15133/",
      "checklistCards": 12,
      "photosSeeded": 1,
@@ -80,6 +86,7 @@
     {
      "job": "16321",
      "label": "16321 SW 26th Terrace Rd",
+     "project": "Florence 1",
      "page": "https://sharmaelechvac.github.io/exj-root-tracker/16321/",
      "checklistCards": 12,
      "photosSeeded": 4,
@@ -92,6 +99,7 @@
     {
      "job": "17385",
      "label": "17385 SW 25th Cir",
+     "project": "Florence 1",
      "page": "https://sharmaelechvac.github.io/exj-root-tracker/17385/",
      "checklistCards": 12,
      "photosSeeded": 5,
@@ -104,6 +112,7 @@
     {
      "job": "212",
      "label": "212 Marion Oaks Golf Rd",
+     "project": "Florence 1",
      "page": "https://sharmaelechvac.github.io/exj-root-tracker/212/",
      "checklistCards": 12,
      "photosSeeded": 16,
@@ -116,6 +125,7 @@
     {
      "job": "498",
      "label": "498 Marion Oaks Golf Rd",
+     "project": "Marion Oaks",
      "page": "https://sharmaelechvac.github.io/exj-root-tracker/498/",
      "checklistCards": 12,
      "photosSeeded": 1,
@@ -128,6 +138,7 @@
     {
      "job": "601",
      "label": "601 Marion Oaks Golf Rd",
+     "project": "Florence 1",
      "page": "https://sharmaelechvac.github.io/exj-root-tracker/601/",
      "checklistCards": 12,
      "photosSeeded": 3,
@@ -147,6 +158,7 @@
     {
      "job": "109-forest-park-ct",
      "label": "109 Forest Park Ct",
+     "project": "Madhosingh Residence",
      "page": "https://sharmaelechvac.github.io/sharmatrack-nok/109-forest-park-ct/",
      "checklistCards": 12,
      "photosSeeded": 0,
@@ -155,6 +167,7 @@
     {
      "job": "antle",
      "label": "3119 Colorado Ave",
+     "project": "Antle Residence Addition",
      "page": "https://sharmaelechvac.github.io/sharmatrack-nok/antle/",
      "checklistCards": 12,
      "photosSeeded": 0,
@@ -163,6 +176,7 @@
     {
      "job": "glaze",
      "label": "132 Balmy Coast Road",
+     "project": "Glaze Residence",
      "page": "https://sharmaelechvac.github.io/sharmatrack-nok/glaze/",
      "checklistCards": 12,
      "photosSeeded": 8,
@@ -182,6 +196,7 @@
     {
      "job": "lot-69",
      "label": "16051 Vetta Dr",
+     "project": "Lot 69 · Bella Collina",
      "page": "https://sharmaelechvac.github.io/sharmatrack-logan/lot-69/",
      "checklistCards": 0,
      "photosSeeded": 0,
@@ -197,6 +212,7 @@
     {
      "job": "blandford",
      "label": "9700 Blandford Rd",
+     "project": "Lot 16 · Lake Nona",
      "page": "https://sharmaelechvac.github.io/sharmatrack-mrcela/blandford/",
      "checklistCards": 12,
      "photosSeeded": 0,
@@ -212,6 +228,7 @@
     {
      "job": "fisher",
      "label": "178 Fisher Loop",
+     "project": "Fisher",
      "page": "https://sharmaelechvac.github.io/sharmatrack-brross/fisher/",
      "checklistCards": 12,
      "photosSeeded": 4,
@@ -224,5 +241,5 @@
    ]
   }
  ],
- "note": "Per-house checklist card counts and seeded photo activity, read from the tracker repos. No stage % is published: seed captions are free-form photo captions, not checklist labels, so a coverage ratio would misstate progress. Per-card photo state from each edition's tracker API merges in Phase 2 step 2."
+ "note": "Per-house checklist card counts and seeded photo activity, read from the tracker repos. No stage % is published: seed captions are free-form photo captions, not checklist labels, so a coverage ratio would misstate progress. Per-card photo state from each edition's tracker API merges in Phase 2 step 2. Display rule (Sanjay, 2026-11-20): app list pages show builder + project/subdivision (the project field) only — the label field is the street address and may appear only inside a job's own tracker view, never on a list row or group entry."
 }

@@ -44,6 +44,34 @@ const TRACKERS = [
   { app: "brross", name: "BR Ross Construction", dir: "/home/hatch/workspace/sharmatrack-brross-app",          live: "https://sharmaelechvac.github.io/sharmatrack-brross/" },
 ];
 
+/* Project/subdivision name per house — what the Jobs lists may show
+ * (Sanjay, 2026-11-20: list rows show builder + project/subdivision
+ * only, NEVER a street address; addresses live inside each job's own
+ * tracker page). Every value below is stated in the job's own tracker
+ * pages/hub — nothing is inferred:
+ *   crew/*        house pages state "Plan: NONA"
+ *   exj/212,601,16321,17385  house pages state "Plan: Florence 1"
+ *   exj/14065     house page states "Plan: Milano"
+ *   exj/498       no plan stated; the job is in Marion Oaks (its page
+ *                 states Marion Oaks throughout)
+ *   exj/15133     nothing stated — no project name (builder-only row)
+ *   nok/glaze     tracker hub names it "glaze residence"
+ *   nok/antle     house page Job field: "Antle Residence Addition"
+ *   nok/109-forest-park-ct  house page Scope: "Madhosingh residence"
+ *   logan/lot-69  house page Job field: "Lot 69 · Bella Collina"
+ *   mrcela/blandford  house page details: "Lot: 16 · Lake Nona"
+ *   brross/fisher the tracker's own job name; no subdivision stated */
+const PROJECT_NAMES = {
+  "crew/3131": "NONA", "crew/3262": "NONA", "crew/3274": "NONA", "crew/3286": "NONA",
+  "exj/212": "Florence 1", "exj/601": "Florence 1", "exj/16321": "Florence 1",
+  "exj/17385": "Florence 1", "exj/14065": "Milano", "exj/498": "Marion Oaks",
+  "nok/glaze": "Glaze Residence", "nok/antle": "Antle Residence Addition",
+  "nok/109-forest-park-ct": "Madhosingh Residence",
+  "logan/lot-69": "Lot 69 · Bella Collina",
+  "mrcela/blandford": "Lot 16 · Lake Nona",
+  "brross/fisher": "Fisher",
+};
+
 function etToday() {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York",
     year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
@@ -109,7 +137,7 @@ function trackerFeed() {
          properly when each edition's tracker API photo state is read in
          Phase 2 step 2 — until then the feed carries counts + photos only. */
       houses.push({
-        job, label, page: `${t.live}${job}/`,
+        job, label, project: PROJECT_NAMES[`${t.app}/${job}`] || "", page: `${t.live}${job}/`,
         checklistCards: cards.length, photosSeeded: photoCount,
         latestPhoto: latest,
       });
@@ -165,7 +193,7 @@ try {
 
 const track = trackerFeed();
 track.generatedAt = now;
-track.note = "Per-house checklist card counts and seeded photo activity, read from the tracker repos. No stage % is published: seed captions are free-form photo captions, not checklist labels, so a coverage ratio would misstate progress. Per-card photo state from each edition's tracker API merges in Phase 2 step 2.";
+track.note = "Per-house checklist card counts and seeded photo activity, read from the tracker repos. No stage % is published: seed captions are free-form photo captions, not checklist labels, so a coverage ratio would misstate progress. Per-card photo state from each edition's tracker API merges in Phase 2 step 2. Display rule (Sanjay, 2026-11-20): app list pages show builder + project/subdivision (the project field) only — the label field is the street address and may appear only inside a job's own tracker view, never on a list row or group entry.";
 save("track-feed.json", track);
 
 /* Finance: "job done -> bill it" signal. Tonight no source carries an
