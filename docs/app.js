@@ -97,8 +97,17 @@
     var app = document.getElementById("app");
     if (app) {
       app.innerHTML = '<div class="sk-main jf"><h1 class="sk-title">Jobs &amp; Field</h1>' +
+        '<div class="jf-h">Jobs</div>' +
         '<div class="jf-list">' +
-        '<a class="jf-row" href="https://sharmaelechvac.github.io/sharmatrack-crew/"><span class="jf-row__body"><span class="jf-row__title">Crew jobs</span><span class="jf-row__sub">SHARMATRACK crew app</span></span></a>' +
+        '<a class="jf-row" href="https://sharmaelechvac.github.io/sharmatrack-crew/"><span class="jf-row__body"><span class="jf-row__title">Z Brothers Construction</span><span class="jf-row__sub">SHARMATRACK tracker</span></span></a>' +
+        '<a class="jf-row" href="https://sharmaelechvac.github.io/exj-root-tracker/"><span class="jf-row__body"><span class="jf-row__title">EXJ Root</span><span class="jf-row__sub">SHARMATRACK tracker</span></span></a>' +
+        '<a class="jf-row" href="https://sharmaelechvac.github.io/sharmatrack-nok/"><span class="jf-row__body"><span class="jf-row__title">NOK Construction</span><span class="jf-row__sub">SHARMATRACK tracker</span></span></a>' +
+        '<a class="jf-row" href="https://sharmaelechvac.github.io/sharmatrack-logan/"><span class="jf-row__body"><span class="jf-row__title">Logan Construction</span><span class="jf-row__sub">SHARMATRACK tracker</span></span></a>' +
+        '<a class="jf-row" href="https://sharmaelechvac.github.io/sharmatrack-mrcela/"><span class="jf-row__body"><span class="jf-row__title">MRCELA</span><span class="jf-row__sub">SHARMATRACK tracker</span></span></a>' +
+        '<a class="jf-row" href="https://sharmaelechvac.github.io/sharmatrack-brross/"><span class="jf-row__body"><span class="jf-row__title">BR Ross Construction</span><span class="jf-row__sub">SHARMATRACK tracker</span></span></a>' +
+        '<a class="jf-row" href="https://sharmaelechvac.github.io/sharmatrack-dnr/"><span class="jf-row__body"><span class="jf-row__title">DNR Contracting</span><span class="jf-row__sub">Mukherjee Residence tracker</span></span></a>' +
+        '</div>' +
+        '<div class="jf-list">' +
         '<a class="jf-row" href="' + INSPECT_APP + '"><span class="jf-row__body"><span class="jf-row__title">Inspection Prep</span></span></a>' +
         '<a class="jf-row" href="' + PUNCH_APP + '"><span class="jf-row__body"><span class="jf-row__title">Pending Projects / Punch</span></span></a>' +
         '<a class="jf-row" href="' + PERMITS_APP + '"><span class="jf-row__body"><span class="jf-row__title">Permit Tracker</span></span></a>' +
@@ -128,42 +137,79 @@
   }
   function pageTitle(page) { return page.key.charAt(0).toUpperCase() + page.key.slice(1); }
 
-  /* ---------------- Jobs ---------------- */
-  function editionLatest(ed) {
-    var best = "";
-    ed.houses.forEach(function (h) { if (h.latestPhoto && h.latestPhoto.takenAt > best) best = h.latestPhoto.takenAt; });
-    return best;
+  /* ---------------- Jobs ----------------
+     Grouped (Sanjay, 2026-11-20: "Jobs apps should be grouped!"): the Jobs
+     tab shows ONE Jobs group entry. The full job list — every builder
+     tracker, every house — lives inside that group on its own page.
+     Grouping is navigation only: each builder keeps its own tracker, its
+     own branding and its own data (per-GC isolation unchanged). */
+  function jobCounts(feed) {
+    var houses = 0;
+    feed.editions.forEach(function (ed) { houses += ed.houses.length; });
+    return { houses: houses, trackers: feed.editions.length + EXTRA_APPS.length };
   }
   function renderJobs(page, feed) {
     lastTrack = feed;
-    var total = 0;
-    feed.editions.forEach(function (ed) { total += ed.houses.length; });
+    var c = jobCounts(feed);
     var h = '<div class="jf"><h1 class="sk-title">Jobs</h1>' +
-      '<p class="jf-note">' + total + ' houses across ' + feed.editions.length +
-      ' builders. Tap a builder to open its tracker right here.</p>';
-    h += '<div class="jf-h">Builders</div><div class="jf-list">';
-    feed.editions.forEach(function (ed) {
-      var latest = editionLatest(ed);
-      h += '<a class="jf-row" href="#/view/' + esc(ed.app) + '"><span class="jf-row__body">' +
-        '<span class="jf-row__title">' + esc(ed.name) + '</span>' +
-        '<span class="jf-row__sub">' + ed.houses.length + (ed.houses.length === 1 ? ' house' : ' houses') +
-        (latest ? ' · last photo ' + fmtDay(latest.slice(0, 10)) : '') + '</span></span>' +
-        '<span class="jf-row__chev">›</span></a>';
-    });
-    h += '</div><div class="jf-h">More trackers</div><div class="jf-list">';
-    EXTRA_APPS.forEach(function (a) {
-      h += '<a class="jf-row" href="' + a.site + '" target="_blank" rel="noopener"><span class="jf-row__body">' +
-        '<span class="jf-row__title">' + esc(a.name) + '</span>' +
-        '<span class="jf-row__sub">' + esc(a.sub) + ' — opens the full tracker</span></span>' +
-        '<span class="jf-row__chev">›</span></a>';
-    });
-    h += '</div><p class="jf-updated">House and photo counts from the trackers, as of ' +
-      fmtStamp(feed.generatedAt) + '. Photos and checklists themselves live in each builder\u2019s tracker.</p></div>';
+      '<p class="jf-note">Every job tracker in one group. Tap the group to open the full job list.</p>' +
+      '<a class="jf-group" href="#/jobs/group"><span class="jf-group__body">' +
+      '<span class="jf-group__title">Jobs</span>' +
+      '<span class="jf-group__sub">' + c.houses + ' houses · ' + c.trackers +
+      ' builder trackers — SHARMATRACK</span></span>' +
+      '<span class="jf-group__chev">›</span></a>' +
+      '<p class="jf-updated">House and photo counts from the trackers, as of ' +
+      fmtStamp(feed.generatedAt) + '.</p></div>';
     page.html(h);
   }
   function buildJobs(page) {
     page.setHeader({ lead: logoLead(), title: "Jobs & Field" });
     loader(page, "track", FEED_TRACK, function (d) { renderJobs(page, d); });
+  }
+  function renderJobsGroup(page, feed) {
+    lastTrack = feed;
+    var c = jobCounts(feed);
+    var h = '<div class="jf"><h1 class="sk-title">Jobs</h1>' +
+      '<p class="jf-note">' + c.houses + ' houses · ' + c.trackers +
+      ' builder trackers. Tap a job to open its builder\u2019s tracker right here.</p>';
+    feed.editions.forEach(function (ed) {
+      h += '<div class="jf-h">' + esc(ed.name) + '</div><div class="jf-list">';
+      ed.houses.forEach(function (hs) {
+        h += '<a class="jf-row" href="#/view/' + esc(ed.app) + '">' +
+          (hs.latestPhoto ? '<img class="jf-thumb" src="' + esc(hs.latestPhoto.url) + '" alt="" loading="lazy">' : '') +
+          '<span class="jf-row__body"><span class="jf-row__title">' + esc(hs.label) + '</span>' +
+          '<span class="jf-row__sub">' + esc(ed.name) + ' · ' + hs.checklistCards + ' checklist items · ' +
+          hs.photosSeeded + ' photos' +
+          (hs.latestPhoto ? ' · latest ' + fmtDay((hs.latestPhoto.takenAt || "").slice(0, 10)) : '') +
+          '</span></span><span class="jf-row__chev">›</span></a>';
+      });
+      h += '</div>';
+    });
+    EXTRA_APPS.forEach(function (a) {
+      h += '<div class="jf-h">' + esc(a.name) + '</div><div class="jf-list">' +
+        '<a class="jf-row" href="' + a.site + '" target="_blank" rel="noopener"><span class="jf-row__body">' +
+        '<span class="jf-row__title">' + esc(a.sub.replace(/ tracker$/, "")) + '</span>' +
+        '<span class="jf-row__sub">' + esc(a.name) + ' · ' + esc(a.sub) + ' — opens the full tracker</span></span>' +
+        '<span class="jf-row__chev">›</span></a></div>';
+    });
+    h += '<p class="jf-updated">House and photo counts from the trackers, as of ' +
+      fmtStamp(feed.generatedAt) + '. Photos and checklists themselves live in each builder\u2019s tracker.</p></div>';
+    page.html(h);
+  }
+  function openJobsGroup() {
+    function pushIt(feed) {
+      if (nav.find("jobs:group") >= 0) { nav.popTo(nav.find("jobs:group")); return; }
+      nav.push("jobs:group", function (page) {
+        page.setHeader({ lead: backLead("Jobs", "#/jobs"), title: "Jobs", backHref: "#/jobs" });
+        renderJobsGroup(page, feed);
+        if (page.refreshable) page.refreshable(function () {
+          return fetchJSON(FEED_TRACK).then(function (d) { store("track", d); renderJobsGroup(page, d); });
+        });
+      });
+    }
+    if (lastTrack) pushIt(lastTrack);
+    else fetchJSON(FEED_TRACK).then(function (d) { store("track", d); pushIt(d); })
+      .catch(function () { location.hash = "#/jobs"; });
   }
   function openView(appKey) {
     function pushIt(feed) {
@@ -417,6 +463,7 @@
     var h = location.hash || "#/jobs";
     var parts = h.replace(/^#\//, "").split("/");
     if (parts[0] === "view" && parts[1]) { openView(parts[1]); return; }
+    if (parts[0] === "jobs" && parts[1] === "group") { openJobsGroup(); return; }
     var key = BUILDERS[parts[0]] ? parts[0] : "jobs";
     if (OFFICE_ONLY[key] && !isOffice()) key = "jobs";
     nav.root(key, BUILDERS[key]);
